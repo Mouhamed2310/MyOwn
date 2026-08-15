@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Vueport indispensable pour le responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOwn – Polo</title>
+    <!-- Liaison vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- SECTION 1 : EN-TÊTE (HEADER) -->
+    <!-- ========================================= -->
+    <header>
+        <div class="burger" id="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="logo">MyOwn</div>
+    
+        <nav id="nav">
+            <a href="#catalogue">Catalogue</a>
+            <a href="#avis">Avis</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    
+        <div class="header-actions">
+            <a href="#" class="panier">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="compteur">0</span>
+            </a>
+            <a href="#contact" class="btn-acheter">Acheter</a>
+        </div>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- SECTION 2 : HERO (Bannière principale) -->
+    <!-- ========================================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MyOwn – Le polo qui vous ressemble</h1>
+            <p>Élégance, confort et qualité. Découvrez notre collection polo, conçu pour durer.</p>
+            <a href="#catalogue" class="btn">Explorer la collection</a>
+        </div>
+        <!-- <div class="hero-image">
+            <img src="images/polo-noir-h.jpg" alt="Polo noir MyOwn" class="hero-img">
+        </div> -->
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 3 : CATALOGUE PRODUITS -->
+    <!-- ========================================= -->
+    <section id="catalogue" class="catalogue">
+        <h2>Notre collection</h2>
+        <div class="produits">
+            <!-- Produit 1 -->
+            <div class="produit">
+                <img src="images/polonoir.jpg" alt="Polo noir">
+                <h3>Polo Noir</h3>
+                <p class="prix">150 MAD</p>
+                <a href="produit.html" class="btn-produit">Voir le produit</a>
+            </div>
+            <!-- Produit 2 -->
+            <div class="produit">
+                <img src="images/polo-blanc.jpg" alt="Polo blanc">
+                <h3>Polo Blanc</h3>
+                <p class="prix">150 MAD</p>
+                <a href="produit.html" class="btn-produit">Voir le produit</a>
+            </div>
+            <!-- Produit 3 -->
+            <div class="produit">
+                <img src="images/polo-bleu.jpg" alt="Polo bleu marine">
+                <h3>Polo Bleu Marine</h3>
+                <p class="prix">150 MAD</p>
+                <a href="produit.html" class="btn-produit">Voir le produit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 4 : AVIS CLIENTS (FICTIFS) -->
+    <!-- ========================================= -->
+    <section id="avis" class="avis">
+        <h2>Ce que nos clients disent</h2>
+        <div class="avis-list">
+            <div class="avis-item">
+                <p class="etoiles">⭐⭐⭐⭐⭐</p>
+                <p>"Super qualité, le polo est doux et bien coupé. Je recommande !"</p>
+                <p class="client">— Amina, Casablanca</p>
+            </div>
+            <div class="avis-item">
+                <p class="etoiles">⭐⭐⭐⭐⭐</p>
+                <p>"Parfait pour le bureau et les sorties. Je vais en racheter."</p>
+                <p class="client">— Karim, Rabat</p>
+            </div>
+            <div class="avis-item">
+                <p class="etoiles">⭐⭐⭐⭐⭐</p>
+                <p>"Un polo simple, élégant, et qui tient bien après plusieurs lavages."</p>
+                <p class="client">— Sarah, Marrakech</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 5 : CONTACT & COMMANDE -->
+    <!-- ========================================= -->
+    <section id="contact" class="contact">
+        <h2>Passer une commande</h2>
+        <p>Vous souhaitez commander un polo ou poser une question ? Remplissez le formulaire ci-dessous.</p>
+        <form action="#" method="post">
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <input type="tel" name="telephone" placeholder="Votre téléphone">
+            <textarea name="message" rows="4" placeholder="Votre message (taille, couleur, quantité...)"></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 6 : PIED DE PAGE (FOOTER) -->
+    <!-- ========================================= -->
+    <footer>
+        <p>&copy; 2026 MyOwn. Tous droits réservés.</p>
+        <p>
+            <a href="#catalogue">Catalogue</a> | 
+            <a href="#avis">Avis</a> | 
+            <a href="#contact">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

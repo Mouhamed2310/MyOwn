@@ -1,0 +1,479 @@
+/* ========================================= */
+/* 0. VARIABLES CSS (PALETTE MODERNE) */
+/* ========================================= */
+
+:root {
+    /* Couleurs principales */
+    --couleur-primaire: #0b2b3b;       /* bleu nuit profond */
+    --couleur-secondaire: #a0b8c9;     /* argenté / bleu clair */
+    --couleur-accent: #3a7ca5;         /* bleu moyen (remplace l'orange) */
+    --couleur-accent-hover: #4a8cb5;   /* bleu plus clair au survol */
+    --couleur-texte: #1a1a1a;
+    --couleur-fond: #f4f7fa;
+    --couleur-blanc: #ffffff;
+    --couleur-gris-clair: #e9edf2;
+    --couleur-gris-moyen: #555555;
+    --couleur-gris-fonce: #333333;
+    --couleur-bordure: #cccccc;
+
+    /* Ombres et transitions */
+    --ombre-legere: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --ombre-moyenne: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition-douce: 0.3s ease;
+
+    /* Polices et tailles */
+    --police-principale: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --taille-titre: 3rem;
+    --taille-sous-titre: 1.2rem;
+}
+
+/* ========================================= */
+/* 1. RÉINITIALISATION & BASE */
+/* ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--police-principale);
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================= */
+/* 2. HEADER */
+/* ========================================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: var(--couleur-primaire);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+/* ---- Logo : à gauche sur desktop ---- */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--couleur-accent);
+    order: 0;
+    flex: 0 0 auto;
+}
+
+/* ---- Burger : caché sur desktop ---- */
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    order: -1;
+}
+
+/* ---- Menu : centré sur desktop ---- */
+nav {
+    display: flex;
+    gap: 40px;
+    order: 1;
+    flex: 1;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--couleur-accent);
+}
+
+/* ---- Panier + bouton : à droite ---- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    order: 2;
+    flex: 0 0 auto;
+}
+
+.panier {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.compteur {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--couleur-accent);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 50%;
+}
+
+.btn-acheter {
+    background: var(--couleur-accent);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-acheter:hover {
+    background: var(--couleur-accent-hover);
+}
+
+/* ========================================= */
+/* 3. HERO SECTION */
+/* ========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    width: 100%;
+    padding: 0 20px;
+    background-image: url('images/polo-noir-h.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--couleur-blanc);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: var(--taille-titre);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: var(--taille-sous-titre);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-blanc);
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background var(--transition-douce), transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--couleur-accent-hover);
+    transform: scale(1.05);
+}
+
+/* ========================================= */
+/* 4. CATALOGUE */
+/* ========================================= */
+
+.catalogue {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--couleur-blanc);
+}
+
+.catalogue h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--couleur-primaire);
+}
+
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.produit {
+    background-color: var(--couleur-fond);
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    transition: transform var(--transition-douce), box-shadow var(--transition-douce);
+}
+
+.produit:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.produit img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produit h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.prix {
+    font-weight: bold;
+    color: var(--couleur-accent);
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.btn-produit {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background var(--transition-douce);
+}
+
+.btn-produit:hover {
+    background-color: var(--couleur-accent);
+    color: var(--couleur-blanc);
+}
+
+/* ========================================= */
+/* 5. AVIS */
+/* ========================================= */
+
+.avis {
+    padding: 60px 40px;
+    background-color: var(--couleur-gris-clair);
+    text-align: center;
+}
+
+.avis h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--couleur-primaire);
+}
+
+.avis-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.avis-item {
+    background-color: var(--couleur-blanc);
+    padding: 20px 30px;
+    border-radius: 12px;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.etoiles {
+    color: var(--couleur-accent);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.client {
+    margin-top: 15px;
+    font-style: italic;
+    color: var(--couleur-gris-moyen);
+}
+
+/* ========================================= */
+/* 6. CONTACT */
+/* ========================================= */
+
+.contact {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--couleur-blanc);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--couleur-primaire);
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--couleur-gris-fonce);
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-blanc);
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background var(--transition-douce);
+}
+
+.contact button:hover {
+    background-color: var(--couleur-accent-hover);
+}
+
+/* ========================================= */
+/* 7. FOOTER */
+/* ========================================= */
+
+footer {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--couleur-accent);
+    transition: color var(--transition-douce);
+}
+
+footer a:hover {
+    color: var(--couleur-accent-hover);
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* ========================================= */
+/* 8. RESPONSIVE (MOBILE-FIRST) */
+/* ========================================= */
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    /* ---- Burger visible à gauche ---- */
+    .burger {
+        display: block;
+        order: -1;
+    }
+
+    /* ---- Logo centré sur mobile ---- */
+    .logo {
+        flex: 1;
+        text-align: center;
+        font-size: 1.5rem;
+        order: 0;
+    }
+
+    /* ---- Menu caché par défaut, s'ouvre via burger ---- */
+    nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+        order: 3;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    /* ---- Panier + bouton à droite ---- */
+    .header-actions {
+        order: 2;
+        gap: 10px;
+    }
+
+    .btn-acheter {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .produits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produit {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .avis-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact form {
+        padding: 0 20px;
+    }
+}
