@@ -109,21 +109,46 @@ function afficherRecapPanier() {
     }
 
     let total = 0;
-    const lignesHtml = panier.map(item => {
+    const lignesHtml = panier.map((item, index) => {
         const sousTotal = item.prix * item.quantite;
         total += sousTotal;
-        return `<li><span>${item.nom} x${item.quantite}</span><span>${sousTotal} MAD</span></li>`;
+        return `<li><span>${item.nom} x${item.quantite}</span><span class="recap-ligne-droite">${sousTotal} MAD <button type="button" class="btn-retirer" data-index="${index}" aria-label="Retirer ${item.nom}">✕</button></span></li>`;
     }).join('');
 
     recapPanierEl.innerHTML = `
         <h4>Récapitulatif de votre commande</h4>
         <ul>${lignesHtml}</ul>
         <p class="recap-total">Total : ${total} MAD</p>
+        <button type="button" id="btn-vider-panier" class="btn-vider-panier">Annuler / vider le panier</button>
     `;
     recapPanierEl.style.display = 'block';
 
     if (messageCommandeEl) {
         messageCommandeEl.value = construireRecapTexte();
+    }
+
+    // Retirer un article précis
+    recapPanierEl.querySelectorAll('.btn-retirer').forEach(bouton => {
+        bouton.addEventListener('click', () => {
+            const index = parseInt(bouton.dataset.index, 10);
+            panier.splice(index, 1);
+            localStorage.setItem('myown_panier', JSON.stringify(panier));
+            mettreAJourCompteur();
+            afficherRecapPanier();
+        });
+    });
+
+    // Vider tout le panier (annuler la commande)
+    const btnVider = document.getElementById('btn-vider-panier');
+    if (btnVider) {
+        btnVider.addEventListener('click', () => {
+            if (confirm("Voulez-vous vraiment annuler et vider votre panier ?")) {
+                panier = [];
+                localStorage.setItem('myown_panier', JSON.stringify(panier));
+                mettreAJourCompteur();
+                afficherRecapPanier();
+            }
+        });
     }
 }
 

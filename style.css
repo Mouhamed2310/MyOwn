@@ -428,8 +428,46 @@ nav a:hover {
 .recap-panier li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 4px 0;
     border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.recap-ligne-droite {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-retirer {
+    background: none;
+    border: none;
+    color: #c0392b;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.btn-retirer:hover {
+    text-decoration: underline;
+}
+
+.btn-vider-panier {
+    display: block;
+    margin: 10px 0 0 auto;
+    background: none;
+    border: 1px solid #c0392b;
+    color: #c0392b;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-vider-panier:hover {
+    background-color: #c0392b;
+    color: var(--couleur-blanc);
 }
 
 .recap-panier .recap-total {
