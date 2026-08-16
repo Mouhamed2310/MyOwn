@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOwn – Détail produit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- HEADER (identique à la page d'accueil) -->
+    <!-- ========================================= -->
+    <header>
+        <div class="burger" id="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">MyOwn</div>
+        <nav id="nav">
+            <a href="index.html#catalogue">Catalogue</a>
+            <a href="index.html#avis">Avis</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a href="index.html#contact" class="panier">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="compteur">0</span>
+            </a>
+            <a href="index.html#contact" class="btn-acheter" id="btn-acheter-header">Acheter</a>
+        </div>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- FIL D'ARIANE -->
+    <!-- ========================================= -->
+    <div class="fil-ariane">
+        <a href="index.html">Accueil</a> / <a href="index.html#catalogue">Catalogue</a> / <span id="fil-nom-produit">Produit</span>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- DÉTAIL DU PRODUIT -->
+    <!-- ========================================= -->
+    <section class="detail-produit">
+        <div class="detail-image">
+            <img id="produit-image" src="" alt="">
+        </div>
+        <div class="detail-infos">
+            <h1 id="produit-nom">Chargement...</h1>
+            <p class="detail-prix" id="produit-prix"></p>
+            <p class="detail-description" id="produit-description"></p>
+
+            <div class="detail-tailles">
+                <p class="detail-label">Taille</p>
+                <div class="tailles-liste" id="tailles-liste"></div>
+            </div>
+
+            <div class="detail-quantite">
+                <p class="detail-label">Quantité</p>
+                <div class="quantite-controle">
+                    <button type="button" id="qte-moins">−</button>
+                    <span id="qte-valeur">1</span>
+                    <button type="button" id="qte-plus">+</button>
+                </div>
+            </div>
+
+            <div class="detail-actions">
+                <button class="btn-ajouter" id="btn-ajouter-detail" type="button">Ajouter au panier</button>
+                <a href="#" class="btn-whatsapp" id="btn-whatsapp-detail" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Commander directement
+                </a>
+            </div>
+
+            <a href="index.html#catalogue" class="retour-catalogue">← Retour au catalogue</a>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+    <footer>
+        <p>&copy; 2026 MyOwn. Tous droits réservés.</p>
+        <p>
+            <a href="index.html#catalogue">Catalogue</a> |
+            <a href="index.html#avis">Avis</a> |
+            <a href="index.html#contact">Contact</a>
+        </p>
+    </footer>
+
+    <a href="#" id="whatsapp-flottant" class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="produits-data.js"></script>
+    <script src="produit.js"></script>
+</body>
+</html>
