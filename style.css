@@ -404,6 +404,50 @@ nav a:hover {
     color: var(--couleur-gris-fonce);
 }
 
+.recap-panier {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    background-color: var(--couleur-gris-clair);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.recap-panier h4 {
+    margin-bottom: 10px;
+    color: var(--couleur-primaire);
+}
+
+.recap-panier ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.recap-panier li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.recap-panier .recap-total {
+    font-weight: bold;
+    color: var(--couleur-accent);
+    text-align: right;
+}
+
+.confirmation-commande {
+    max-width: 500px;
+    margin: 15px auto 0;
+    background-color: #e1f5ea;
+    color: #0f6e39;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
 .contact form {
     max-width: 500px;
     margin: 0 auto;

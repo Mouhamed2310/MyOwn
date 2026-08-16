@@ -32,7 +32,7 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span class="compteur">0</span>
             </a>
-            <a href="#contact" class="btn-acheter">Acheter</a>
+            <a href="#contact" class="btn-acheter" id="btn-acheter-header">Acheter</a>
         </div>
     </header>
 
@@ -128,13 +128,17 @@
     <section id="contact" class="contact">
         <h2>Passer une commande</h2>
         <p>Vous souhaitez commander un polo ou poser une question ? Remplissez le formulaire ci-dessous.</p>
-        <form action="https://formspree.io/f/ton-id" method="POST">
+        <div id="recap-panier" class="recap-panier" style="display: none;"></div>
+        <form id="form-commande" action="https://formspree.io/f/ton-id" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" required>
             <input type="email" name="email" placeholder="Votre email" required>
             <input type="tel" name="telephone" placeholder="Votre téléphone">
-            <textarea name="message" rows="4" placeholder="Votre message (taille, couleur, quantité...)"></textarea>
-            <button type="submit" class="btn">Envoyer</button>
+            <textarea id="message-commande" name="message" rows="4" placeholder="Votre message (taille, couleur, quantité...)"></textarea>
+            <button type="submit" class="btn">Envoyer la commande</button>
         </form>
+        <p id="confirmation-commande" class="confirmation-commande" style="display: none;">
+            Votre commande a bien été envoyée. Nous vous recontactons rapidement !
+        </p>
     </section>
 
     <!-- ========================================= -->
