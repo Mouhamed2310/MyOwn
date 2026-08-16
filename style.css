@@ -273,6 +273,72 @@ nav a:hover {
     color: var(--couleur-blanc);
 }
 
+/* ---- Actions produit (voir / ajouter / whatsapp) ---- */
+.produit-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-ajouter {
+    background-color: var(--couleur-gris-clair);
+    color: var(--couleur-primaire);
+    border: 1px solid var(--couleur-bordure);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background var(--transition-douce);
+}
+
+.btn-ajouter:hover {
+    background-color: var(--couleur-secondaire);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: var(--couleur-blanc);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background var(--transition-douce);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    color: var(--couleur-blanc);
+}
+
+/* ---- Bouton WhatsApp flottant ---- */
+.whatsapp-flottant {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    background-color: #25D366;
+    color: var(--couleur-blanc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: var(--ombre-moyenne);
+    z-index: 999;
+    transition: transform var(--transition-douce);
+}
+
+.whatsapp-flottant:hover {
+    transform: scale(1.1);
+    color: var(--couleur-blanc);
+}
+
 /* ========================================= */
 /* 5. AVIS */
 /* ========================================= */

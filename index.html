@@ -57,25 +57,43 @@
         <h2>Notre collection</h2>
         <div class="produits">
             <!-- Produit 1 -->
-            <div class="produit">
+            <div class="produit" data-nom="Polo Noir" data-prix="150">
                 <img src="images/polonoir.jpg" alt="Polo noir">
                 <h3>Polo Noir</h3>
                 <p class="prix">150 MAD</p>
-                <a href="produit.html" class="btn-produit">Voir le produit</a>
+                <div class="produit-actions">
+                    <a href="produit.html" class="btn-produit">Voir le produit</a>
+                    <button class="btn-ajouter" type="button">Ajouter au panier</button>
+                    <a href="#" class="btn-whatsapp btn-commander-wa" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Commander
+                    </a>
+                </div>
             </div>
             <!-- Produit 2 -->
-            <div class="produit">
+            <div class="produit" data-nom="Polo Blanc" data-prix="150">
                 <img src="images/polo-blanc.jpg" alt="Polo blanc">
                 <h3>Polo Blanc</h3>
                 <p class="prix">150 MAD</p>
-                <a href="produit.html" class="btn-produit">Voir le produit</a>
+                <div class="produit-actions">
+                    <a href="produit.html" class="btn-produit">Voir le produit</a>
+                    <button class="btn-ajouter" type="button">Ajouter au panier</button>
+                    <a href="#" class="btn-whatsapp btn-commander-wa" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Commander
+                    </a>
+                </div>
             </div>
             <!-- Produit 3 -->
-            <div class="produit">
+            <div class="produit" data-nom="Polo Bleu Marine" data-prix="150">
                 <img src="images/polo-bleu.jpg" alt="Polo bleu marine">
                 <h3>Polo Bleu Marine</h3>
                 <p class="prix">150 MAD</p>
-                <a href="produit.html" class="btn-produit">Voir le produit</a>
+                <div class="produit-actions">
+                    <a href="produit.html" class="btn-produit">Voir le produit</a>
+                    <button class="btn-ajouter" type="button">Ajouter au panier</button>
+                    <a href="#" class="btn-whatsapp btn-commander-wa" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Commander
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -130,6 +148,13 @@
             <a href="#contact">Contact</a>
         </p>
     </footer>
+
+    <!-- ========================================= -->
+    <!-- BOUTON WHATSAPP FLOTTANT -->
+    <!-- ========================================= -->
+    <a href="#" id="whatsapp-flottant" class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Lien vers le fichier JavaScript -->
     <script src="script.js"></script>
