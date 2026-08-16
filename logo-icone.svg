@@ -1,0 +1,10 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="58" fill="#0b2b3b"/>
+  <!-- Col de polo stylisé, forme un M abstrait -->
+  <polygon points="26,32 64,60 48,94 14,70" fill="#f4f7fa"/>
+  <polygon points="94,32 56,60 72,94 106,70" fill="#3a7ca5"/>
+  <!-- Placket / boutons -->
+  <rect x="57" y="58" width="6" height="30" rx="3" fill="#f4f7fa"/>
+  <circle cx="60" cy="68" r="2.6" fill="#0b2b3b"/>
+  <circle cx="60" cy="78" r="2.6" fill="#0b2b3b"/>
+</svg>
